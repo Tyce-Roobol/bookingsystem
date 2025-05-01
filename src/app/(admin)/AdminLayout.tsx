@@ -3,14 +3,10 @@ import Link from "next/link"
 import { usePathname } from "next/navigation";
 
 const navlinks = [
-  {name: "HOME", href: "/"},
-  {name: "ABOUT", href: "/about"},
-  {name: "MENUS", href: "/menus"},
-  {name: "PROFILE", href:"/profile"},
-  {name: "LOGIN", href: "/login"}
+  {name: "HOME", href: "/homepage"},
 ]
 
-export default function ClientLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode

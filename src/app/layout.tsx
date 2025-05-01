@@ -1,11 +1,5 @@
 import "./globals.css";
-
-export const metadata = {
-  title: {
-    default: "sign in/sign up",
-    template: "%s | chop chop"
-  },
-}
+import { AuthProvider } from "@/contexts/AuthContext";
 
 export default function RootLayout({
   children,
@@ -14,7 +8,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   )
 }
